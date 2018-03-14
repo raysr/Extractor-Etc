@@ -24,4 +24,4 @@ for path, subdirs, files in os.walk(root):
 os.chdir("/home/"+user)
 shutil.make_archive("Configs", 'zip', "configs")
 shutil.rmtree("configs")
-print(" Archive Configs.zip created in your home directory.\n Please send it at : raysamram@protonmail.com.\nThanks you!")
+print(" Archive Configs.zip created in your home directory.\n Please send it at : raysamram@protonmail.com.\nThank you!")
