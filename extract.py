@@ -4,7 +4,7 @@ to prepare a big dataset for a classifier of categorizable texts '''
 import os,shutil
 import random
 
-user=input("What's your main user's username ?\n ")
+user=str(input("What's your main user's username ?\n ")).lower()
 os.system("mkdir /home/"+user+"/configs")
 root="/etc/"
 r=2
