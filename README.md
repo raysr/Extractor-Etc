@@ -3,7 +3,9 @@ A simple script to extract all configuration files stored in /etc  to prepare a 
 
 
 ## How-to-use:
-~~~~git clone https://github.com/raysr/Extractor-Etc && cd Extractor-Etc && sudo python extractCONFIGs.py~~~~ 
+~~~~
+git clone https://github.com/raysr/Extractor-Etc && cd Extractor-Etc && sudo python extractCONFIGs.py
+~~~~ 
 ### Then please send your ~/Configs.zip at : raysamram@protonmail.com
 
 Thanks.
