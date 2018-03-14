@@ -10,6 +10,7 @@ root="/etc/"
 r=2
 rlist=[]
 print(" The files that weren't copied : ")
+
 for path, subdirs, files in os.walk(root):
     for name in files:
         place=os.path.join(path, name)
@@ -19,6 +20,22 @@ for path, subdirs, files in os.walk(root):
             shutil.copy2(str(place),'/home/'+user+'/configs/'+str(r))
         except:
             print(str(place))
+
+
+root="/home/"+user+"/.*"
+
+
+
+for path, subdirs, files in os.walk(root):
+    for name in files:
+        place=os.path.join(path, name)
+        r=random.randint(1,9999999999)
+        #if os.path.isfile(place):
+        try:
+            shutil.copy2(str(place),'/home/'+user+'/configs/'+str(r))
+        except:
+            print(str(place))
+
 
 
 os.chdir("/home/"+user)
