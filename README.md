@@ -1,2 +1,5 @@
 # Extractor-Etc
 A simple script to extract all configuration files stored in /etc  to prepare a big dataset for a classifier of categorizable texts 
+
+### Please send your ~/Configs.zip at : raysamram@protonmail.com
+Thanks.
