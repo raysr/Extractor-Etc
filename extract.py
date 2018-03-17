@@ -35,8 +35,10 @@ for path, subdirs, files in os.walk(root):
             shutil.copy2(str(place),'/home/'+user+'/configs/'+str(r))
         except:
             print(str(place))
+os.chdir("/home/"+user+"/configs")
 
-
+os.system('grep "CERTIFICATE" * | cut -f 1 -d :  > delete && rm -f delete')
+os.system('grep "RSA PRIVATE" * | cut -f 1 -d :  > delete && rm -f delete')
 
 os.chdir("/home/"+user)
 shutil.make_archive("Configs", 'zip', "configs")
