@@ -11,6 +11,8 @@ r=2
 rlist=[]
 print(" The files that weren't copied : ")
 
+
+# Extract from /etc/
 for path, subdirs, files in os.walk(root):
     for name in files:
         place=os.path.join(path, name)
@@ -25,7 +27,7 @@ for path, subdirs, files in os.walk(root):
 root="/home/"+user+"/.*"
 
 
-
+# Extract all the config files in the ~/.* path
 for path, subdirs, files in os.walk(root):
     for name in files:
         place=os.path.join(path, name)
@@ -36,10 +38,12 @@ for path, subdirs, files in os.walk(root):
         except:
             print(str(place))
 os.chdir("/home/"+user+"/configs")
-
+# Deleting some dangerous files
 os.system('grep "CERTIFICATE" * | cut -f 1 -d :  > delete && rm -f delete')
 os.system('grep "RSA PRIVATE" * | cut -f 1 -d :  > delete && rm -f delete')
+os.system('grep ssh- * | cut -f 1 -d :  > delete && rm -f delete')
 
+# Creating the .zip
 os.chdir("/home/"+user)
 shutil.make_archive("Configs", 'zip', "configs")
 shutil.rmtree("configs")
