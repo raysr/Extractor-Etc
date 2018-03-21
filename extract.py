@@ -39,10 +39,10 @@ for path, subdirs, files in os.walk(root):
             print(str(place))
 os.chdir("/home/"+user+"/configs")
 # Deleting some dangerous files
-os.system('grep "CERTIFICATE" * | cut -f 1 -d :  > delete && rm -f delete')
+'''os.system('grep "CERTIFICATE" * | cut -f 1 -d :  > delete && rm -f delete')
 os.system('grep "RSA PRIVATE" * | cut -f 1 -d :  > delete && rm -f delete')
 os.system('grep ssh- * | cut -f 1 -d :  > delete && rm -f delete')
-
+'''
 # Creating the .zip
 os.chdir("/home/"+user)
 shutil.make_archive("Configs", 'zip', "configs")
